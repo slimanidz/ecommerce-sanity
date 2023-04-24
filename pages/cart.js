@@ -24,12 +24,11 @@ const Cart = (products) => {
 
   if (cartItems.length === 0) {
     return (
-      <div>
-        <NavBar />
+      <Page>
         <h1 className="flex justify-center items-center pt-32 text-2xl font-bold">
           Votre panier est vide
         </h1>
-      </div>
+      </Page>
     );
   }
   return (
@@ -46,7 +45,7 @@ const Cart = (products) => {
                     <div className="flex  h-32 md:h-48  border p-3">
                       <div>
                         <ImageSrc
-                          Url={itemAll.image[0]}
+                          Url={`${urlFor(itemAll.image[0])}`}
                           className=" h-full w-32 md:w-48 lg:w-64 grow border p-1 "
                         />
                       </div>

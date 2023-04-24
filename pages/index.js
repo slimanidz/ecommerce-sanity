@@ -45,7 +45,10 @@ export default function Home(products) {
             className="border w-32  md:w-64 p-2 flex flex-col items-center"
           >
             <button onClick={handleProduit} data-id={produit._id}>
-              <ImageSrc Url={produit.image[0]} className="w-48 h-48 grow" />
+              <ImageSrc
+                Url={`${urlFor(produit.image[0])}`}
+                className="w-48 h-48 grow"
+              />
               {/* <img
                 width={200}
                 height={200}

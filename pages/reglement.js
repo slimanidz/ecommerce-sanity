@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Page from "../components/Page";
 
-const reglement = (products) => {
+const Reglement = (products) => {
   const { cartItems } = useCartContext();
 
   const article = cartItems.reduce((total, cartItem) => {
@@ -38,7 +38,7 @@ const reglement = (products) => {
   );
 };
 
-export default reglement;
+export default Reglement;
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';

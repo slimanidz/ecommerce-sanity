@@ -28,28 +28,28 @@ const Produit = (props) => {
                   {" "}
                   <div className=" w-auto flex flex-col gap-3 border p-1">
                     <ImageSrc
-                      Url={produit.image[imageNum]}
+                      Url={`${urlFor(produit.image[imageNum])}`}
                       className="w-64 h-64 grow border"
                     />
 
                     <div className="flex gap-1">
                       <button onClick={() => setImageNum(0)}>
                         <ImageSrc
-                          Url={produit.image[0]}
+                          Url={`${urlFor(produit.image[0])}`}
                           className="w-20 h-20"
                         />
                       </button>
 
                       <button onClick={() => setImageNum(1)}>
                         <ImageSrc
-                          Url={produit.image[1]}
+                          Url={`${urlFor(produit.image[1])}`}
                           className="w-20 h-20"
                         />
                       </button>
 
                       <button onClick={() => setImageNum(2)}>
                         <ImageSrc
-                          Url={produit.image[2]}
+                          Url={`${urlFor(produit.image[2])}`}
                           className="w-20 h-20"
                         />
                       </button>
