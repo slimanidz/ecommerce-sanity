@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCartContext } from "./CartContext";
 import { urlFor } from "../lib/client";
 import ImageSrc from "./ImageSrc";
+import Page from "./Page";
 
 const Produit = (props) => {
   const [imageNum, setImageNum] = useState(0);
@@ -15,7 +16,7 @@ const Produit = (props) => {
   } = useCartContext();
 
   return (
-    <div className="">
+    <Page className="">
       <div className="  p-3 ">
         {products.products.map((produit) => (
           <div key={produit._id}>
@@ -107,7 +108,7 @@ const Produit = (props) => {
           </div>
         ))}
       </div>
-    </div>
+    </Page>
   );
 };
 

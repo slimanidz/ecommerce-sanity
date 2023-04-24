@@ -1,12 +1,10 @@
 import React from "react";
 import Produit from "../components/Produit";
 import { client } from "../lib/client";
-import NavBar from "../components/NavBar";
 
 const produit = (products) => {
   return (
     <div>
-      <NavBar />
       <Produit products={products} />
     </div>
   );
