@@ -22,9 +22,7 @@ const Produit = (props) => {
           <div key={produit._id}>
             {produit._id === produitId && (
               <div>
-                <h1 className="text-3xl font-bold p-3">
-                  Produit: {produit.name}
-                </h1>
+                <h1 className="text-3xl font-bold p-3">{produit.name}</h1>
                 <div className="flex gap-2 md:gap-5">
                   {" "}
                   <div className=" w-auto flex flex-col gap-3 border p-1">

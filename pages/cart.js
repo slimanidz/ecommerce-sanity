@@ -7,6 +7,8 @@ import { client, urlFor } from "../lib/client";
 import ImageSrc from "../components/ImageSrc";
 import { useRouter } from "next/router";
 import Page from "../components/Page";
+import ProgressReglement from "../components/ProgressReglement";
+import Link from "next/link";
 
 const Cart = (products) => {
   const router = useRouter();
@@ -35,6 +37,7 @@ const Cart = (products) => {
     <Page>
       <div className="lg:flex lg:flex-col lg:items-center">
         <div className="flex flex-col   gap-3 p-2 lg:w-[75%] ">
+          <ProgressReglement widthProgress={9} />
           <h1 className=" px-5 pt-10 text-2xl font-bold">PANIER</h1>
 
           {products.products.map((itemAll) => (
@@ -109,12 +112,18 @@ const Cart = (products) => {
             </span>
           </div>
           <div className=" flex justify-center">
-            <button
+            {/* <button
               onClick={handlePayer}
               className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
             >
               PAYER
-            </button>
+            </button> */}
+            <Link
+              href="/identification"
+              className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
+            >
+              VALIDER
+            </Link>
           </div>
         </div>
       </div>

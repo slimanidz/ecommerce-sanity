@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Page from "../components/Page";
 
 const about = () => {
   return (
-    <div>
-      <NavBar />
+    <Page>
       <div className="p-5">
         <h1 className="pb-5">Add Produts</h1>
         <p
@@ -14,7 +14,7 @@ const about = () => {
           Sanity
         </p>
       </div>
-    </div>
+    </Page>
   );
 };
 

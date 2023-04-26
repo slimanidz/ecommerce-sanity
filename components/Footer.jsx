@@ -3,10 +3,10 @@ import ImageSrc from "./ImageSrc";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center gap-5 bg-slate-700 text-white p-5">
+    <div className="flex flex-col items-center gap-5 bg-slate-700 text-white p-5 ">
       <p className="border-b pb-5 text-center">
-        Nos conseillers et conseillères Darty vous répondent du lundi au
-        dimanche de 7h à 22h au 0892 01 77 67 67.
+        Nos conseillers et conseillères vous répondent du lundi au dimanche de
+        7h à 22h au 0892 01 77 67 67.
       </p>
       <div className="w-full flex justify-around border-b pb-5">
         <div className="flex flex-col items-center">

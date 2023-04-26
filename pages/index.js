@@ -9,6 +9,7 @@ import ImageSrc from "../components/ImageSrc";
 import Page from "../components/Page";
 
 export default function Home(products) {
+  console.log(products);
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -47,20 +48,13 @@ export default function Home(products) {
             <button onClick={handleProduit} data-id={produit._id}>
               <ImageSrc
                 Url={`${urlFor(produit.image[0])}`}
-                className="w-48 h-48 grow"
+                className="w-48 h-32 md:h-48 grow "
               />
-              {/* <img
-                width={200}
-                height={200}
-                src={`${urlFor(produit.image[0])}`}
-                alt="image"
-                className="w-48 h-48 grow"
-              /> */}
             </button>
 
             <div className="flex md: justify-between w-full">
-              <h1 className="truncate w-[50%]">{produit.name}</h1>
-              <p className="bg-slate-300 px-2">
+              <h1 className="truncate w-[50%] text-sm ">{produit.name}</h1>
+              <p className="bg-slate-300 px-2 rounded text-sm">
                 {FormatCurrency(produit.price)}
               </p>
             </div>
@@ -110,8 +104,10 @@ export default function Home(products) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
+  const query1 = '*[_type == "users"]';
+  const users = await client.fetch(query1);
 
   return {
-    props: { products },
+    props: { products, users },
   };
 };
