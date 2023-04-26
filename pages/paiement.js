@@ -12,7 +12,7 @@ const paiement = (products) => {
 
       <Reglement products={products} />
       <Link
-        href="/recapulatif"
+        href="/recapitulatif"
         className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
       >
         Valider

@@ -3,12 +3,12 @@ import Page from "../components/Page";
 import ProgressReglement from "../components/ProgressReglement";
 import Link from "next/link";
 
-const recapulatif = () => {
+const recapitulatif = () => {
   return (
     <Page>
       <ProgressReglement widthProgress={100} />
       <div>
-        <div>recapulatif</div>
+        <div>récapitulatif</div>
         <Link
           href="/"
           className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
@@ -20,4 +20,4 @@ const recapulatif = () => {
   );
 };
 
-export default recapulatif;
+export default recapitulatif;
