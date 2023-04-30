@@ -8,7 +8,7 @@ const ProgressReglement = (props) => {
       <div>
         <ImageSrc
           Url={"/images/ecommerce-sanity.jpeg"}
-          className="w-20 h-20 rounded-full "
+          className="w-[60px] h-[60px]  md:w-20 md:h-20 rounded-full "
         />
       </div>
       <div className="grow">

@@ -98,7 +98,7 @@ const Cart = (products) => {
               ))}
             </div>
           ))}
-          <div className=" flex justify-end p-5">
+          <div className=" flex justify-end pt-5 mr-5">
             Total:
             <span className="font-bold">
               {FormatCurrency(
@@ -111,16 +111,10 @@ const Cart = (products) => {
               )}
             </span>
           </div>
-          <div className=" flex justify-center">
-            {/* <button
-              onClick={handlePayer}
-              className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
-            >
-              PAYER
-            </button> */}
+          <div className=" flex justify-end">
             <Link
               href="/identification"
-              className="w-32 md:w-64 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
+              className="w-32 p-1 mr-5 flex justify-center text-xl font-bold text-white   bg-blue-500 active:bg-blue-300 rounded"
             >
               VALIDER
             </Link>

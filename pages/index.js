@@ -104,8 +104,8 @@ export default function Home(products) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
-  const query1 = '*[_type == "users"]';
-  const users = await client.fetch(query1);
+  const queryUsers = '*[_type == "users"]';
+  const users = await client.fetch(queryUsers);
 
   return {
     props: { products, users },

@@ -79,6 +79,17 @@ const AppContextProvider = (props) => {
     localStorage.setItem("produitId", JSON.stringify(produitId));
   }, [produitId]);
 
+  const initialEmailPassword = localStorage.getItem("emailPassword")
+    ? JSON.parse(localStorage.getItem("emailPassword"))
+    : [];
+  const [emailPassword, setEmailPassword] = useState(initialEmailPassword);
+  useEffect(() => {
+    localStorage.setItem("emailPassword", JSON.stringify(emailPassword));
+  }, [emailPassword]);
+
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
   return (
     <AppContext.Provider
       {...props}
@@ -93,6 +104,8 @@ const AppContextProvider = (props) => {
         cartItems,
         produitId,
         setProduitId,
+        emailPassword,
+        setEmailPassword,
       }}
     />
   );
