@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import ImageSrc from "../components/ImageSrc";
 import Page from "../components/Page";
+import Link from "next/link";
 
 export default function Home(products) {
   console.log(products);
@@ -97,6 +98,7 @@ export default function Home(products) {
           </div>
         ))}
       </div>
+      <Link href="/test">test</Link>
     </Page>
   );
 }
