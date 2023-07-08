@@ -1,35 +1,92 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-const people = [
-  { id: 1, name: "vitry sur siene", url: "#" },
-  { id: 2, name: "ville juif", url: "#" },
-  { id: 3, name: "valonton", url: "#" },
-  { id: 4, name: "choisy le roi", url: "#" },
-  { id: 5, name: "paris", url: "#" },
-  { id: 6, name: "paris", url: "#" },
-  { id: 7, name: "paris", url: "#" },
-  { id: 8, name: "paris", url: "#" },
-  { id: 9, name: "paris", url: "#" },
-  { id: 10, name: "paris", url: "#" },
-];
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+// import "swiper/css/scrollbar";
 
-const test = () => {
+function App() {
+  const imageUrl = [
+    { url: "/histoire1/1.jpg", text: " Les glaces délicieuses" },
+    {
+      url: "/histoire1/2.jpg",
+      text: `Ding ding ding ding « Shubham, Ira, Tonton Sorbet est là !»`,
+    },
+    {
+      url: "/histoire1/3.jpg",
+      text: "Tous les enfants se précipitent vers Tonton Sorbet !",
+    },
+    {
+      url: "/histoire1/4.jpg",
+      text: " Nous nous regardons à travers les bouteilles. Nos visages ont l'air si drôles !",
+    },
+    {
+      url: "/histoire1/5.jpg",
+      text: "Miammm... Des glaces magiques et colorées !",
+    },
+    {
+      url: "/histoire1/6.jpg",
+      text: "              Saee tapote la glace de Abhi.",
+    },
+    {
+      url: "/histoire1/7.jpg",
+      text: "              Une glace tombe, mais Bhoori est très content.",
+    },
+    {
+      url: "/histoire1/8.jpg",
+      text: "              J'aime les glaces. J'en vois partout.",
+    },
+    {
+      url: "/histoire1/9.jpg",
+      text: "              Shubham veut être un Tonton Sorbet quand il sera grand.",
+    },
+    {
+      url: "/histoire1/10.jpg",
+      text: "              Il me fera une ÉNORME glace.",
+    },
+    {
+      url: "/histoire1/11.jpg",
+      text: "              Shubham pourra en manger un morceau, tout comme Bhoori.",
+    },
+    {
+      url: "/histoire1/12.jpg",
+      text: "              J'avalerai le reste !",
+    },
+    { url: "/histoire1/13.jpg", text: "miam miam mmiammmmm" },
+  ];
   return (
-    <div className="flex">
-      {people.map((item) => (
-        <div className="" key={item.id}>
-          <div className="w-screen flex flex-col items-center justify-center ">
-            <img
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-              alt="image"
-              className={` w-64  border-2 border-red-700 `}
-            />
-            <p>{item.name}</p>
-          </div>
-        </div>
-      ))}
+    <div className="w-screen h-screen flex justify-center  items-center">
+      <div className="md:w-[50%] w-[100%]">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          // pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {imageUrl.map((item) => (
+            <SwiperSlide key={item.url} className=" ">
+              <div className="flex flex-col items-center gap-5 p-5 ">
+                <img
+                  className="w-full h-[300px] sm:h-[500px] rounded-xl "
+                  src={item.url}
+                  alt="slide_image"
+                />
+                <p className="text-2xl sm:text-4xl text-center w-[75%]">
+                  {item.text}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
-};
+}
 
-export default test;
+export default App;

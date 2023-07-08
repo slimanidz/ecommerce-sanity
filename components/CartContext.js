@@ -70,6 +70,9 @@ const AppContextProvider = (props) => {
   const removeFromCart = (id) => {
     setCartItems((currItems) => currItems.filter((item) => item.id !== id));
   };
+  const videCart = () => {
+    setCartItems((currItems) => currItems.filter((item) => !item));
+  };
 
   const initialId = localStorage.getItem("produitId")
     ? JSON.parse(localStorage.getItem("produitId"))
@@ -106,6 +109,7 @@ const AppContextProvider = (props) => {
         setProduitId,
         emailPassword,
         setEmailPassword,
+        videCart,
       }}
     />
   );

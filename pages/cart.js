@@ -27,6 +27,7 @@ const Cart = (products) => {
   if (cartItems.length === 0) {
     return (
       <Page>
+        <h1 className=" px-5 pt-10 text-2xl font-bold">PANIER</h1>
         <h1 className="flex justify-center items-center pt-32 text-2xl font-bold">
           Votre panier est vide
         </h1>

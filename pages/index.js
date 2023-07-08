@@ -3,14 +3,13 @@ import FormatCurrency from "../components/FormatCurancy";
 import NavBar from "../components/NavBar";
 import Image from "next/image";
 import { client, urlFor } from "../lib/client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ImageSrc from "../components/ImageSrc";
 import Page from "../components/Page";
 import Link from "next/link";
 
 export default function Home(products) {
-  console.log(products);
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -98,7 +97,9 @@ export default function Home(products) {
           </div>
         ))}
       </div>
-      <Link href="/test">test</Link>
+
+      {/* <Link href="/test">test</Link>
+      <Link href="/test2">test2</Link> */}
     </Page>
   );
 }
